@@ -7,14 +7,16 @@ quindi const giocatore e const
 
 Stabilire il vincitore, in base a chi fa il punteggio più alto. if if else else se player > di com  player < di com e se è = pareggio */
 
-
+document.getElementById("genera").addEventListener("click", function() {
 
 const numeroDadoPlayer = Math.floor (Math.random() *6 +1);
 console.log(numeroDadoPlayer);
+document.getElementById('numeroplayer').innerHTML = numeroDadoPlayer ;
 
 
 const numeroDadoCom = Math.floor (Math.random() *6 +1);
-console.log(numeroDadoCom);
+document.getElementById('numerocom').innerHTML = numeroDadoCom;
+
 
 
 let vincentePlayer = 'Il player ha vinto';
@@ -23,29 +25,30 @@ let vincenteCom = 'Il com ha vinto';
 
 let pareggio = 'Pareggio';
 
-const wrapperElement=document.querySelector('div.wrapper');
-const cardElement = document.createElement ('div');
-const pElement=document.createElement('p');
+
+let numeroVincente;
+
 
 if (numeroDadoPlayer > numeroDadoCom) {
 
-    pElement.textContent = vincentePlayer;
-    
-    console.log( vincentePlayer);
+    numeroVincente = vincentePlayer;
 
 }
 
 else if (numeroDadoCom > numeroDadoPlayer) {
 
-    console.log( vincenteCom);
+    numeroVincente = vincenteCom;
    
 
 }
 
 else { (numeroDadoPlayer == numeroDadoCom) 
 
-    console.log(pareggio);
+    numeroVincente = pareggio;
 
 
 }
 
+document.getElementById('vincente').innerHTML = numeroVincente ;
+
+});
