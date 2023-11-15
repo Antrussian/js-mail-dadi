@@ -23,11 +23,13 @@ let vincenteCom = 'Il com ha vinto';
 
 let pareggio = 'Pareggio';
 
-
+const wrapperElement=document.querySelector('div.wrapper');
+const cardElement = document.createElement ('div');
+const pElement=document.createElement('p');
 
 if (numeroDadoPlayer > numeroDadoCom) {
 
-  
+    pElement.textContent = vincentePlayer;
     
     console.log( vincentePlayer);
 
