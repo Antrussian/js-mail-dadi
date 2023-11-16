@@ -50,19 +50,28 @@ document.getElementById("genera").addEventListener("click", function() {
         let UtenteRegistrato = 0;
 
         for (let i = 0; i < listUser.length; i++) {
+            
             if (userEmail === listUser[i]) {
                 UtenteRegistrato = 1;
-                break;
+               
             }
         }
     
         if (UtenteRegistrato) {
-            console.log('registrato');
+        document.getElementById('outputFinale').innerHTML = 'Utente Registrato, inserisci la tua password';
+  
            
             
-        } else {
-            console.log('NON REGISTRATO');
+        } 
+        else {
+             document.getElementById('outputFinale').innerHTML = ' Utente Non Registrato, Registrati';
+      
             
         }
 
     });
+
+
+
+
+    
